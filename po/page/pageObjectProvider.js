@@ -1,7 +1,7 @@
 var PAGE_OBJECT_MAP = {
     "home": "./homePage",
     "results": "./resultsPage",
-    "join": "./joinPage"
+    "login": "./loginPage"
 
 };
 

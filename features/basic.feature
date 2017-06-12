@@ -1,12 +1,9 @@
 Feature: Basic test
 
   Scenario: Basic test 1
-    Given I am on "home" page
-    When I open login page
-    Then Login page should be displayed
+    Given I am on "login" page
     When I enter credentials
     Then Home page should be displayed
-
 
     Scenario: Basic test 2
     Given I am on "home" page
