@@ -19,11 +19,6 @@ var BasePage = function () {
         });
     };
 
-
-    this.methodCommonForAllPages = function () {
-        return "method"
-    };
-
     this.hitEnter = function () {
         return browser.actions().sendKeys(protractor.Key.ENTER).perform();
     };

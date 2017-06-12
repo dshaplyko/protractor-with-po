@@ -1,11 +1,11 @@
 Feature: Basic test
 
   Scenario: Basic test 1
-    Given I am on "join" page
-    When I submit join form
+    Given I am on "home" page
+    When I open login page
+    Then Login page should be displayed
+    When I enter credentials
     Then Home page should be displayed
-      And I perform a search of "image"
-    Then I should see a collection of images
 
 
     Scenario: Basic test 2

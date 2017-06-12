@@ -1,14 +1,14 @@
 var Header = function () {
 
     //Header elements and methods
-    this.header = element(by.id('site-header'));
-    this.joinLink = element(by.css(".account[data-nav='nav=nav_Join']"));
+    this.header = element(by.css('.wk-header'));
+    this.loginButton = element(by.css(".login-button"));
 
-    this.clickJoin = function () {
+    this.clickLogin = function () {
         var self = this;
-        return self.joinLink.click()
+        return self.loginButton.click()
             .then(function () {
-                return require('../page/joinPage');
+                return require('../page/loginPage');
             })
     }
 

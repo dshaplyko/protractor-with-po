@@ -15,8 +15,8 @@ var CommonSteps = function () {
         return page.searchBox.performSearchWithFilter(searchTerm, filterName);
     });
 
-    this.When(/^I open join me page$/, function () {
-        return page.header.clickJoin();
+    this.When(/^I open login page$/, function () {
+        return page.header.clickLogin();
     });
 
     this.When(/^I am using step for all pages$/, function () {

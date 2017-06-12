@@ -19,6 +19,14 @@ function ResultsPage() {
         return self.imageResults.count().then(function (number) {
             expect(number).to.be.above(0)
         })
+    };
+
+    this.checkImagesVisibility = function () {
+        var self = this;
+        return self.imageResults.isDisplayed().then(function (isDisplayed) {
+            return expect(isDisplayed).to.be.true;
+
+        })
     }
 
 }
