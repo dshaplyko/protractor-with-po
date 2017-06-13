@@ -1,5 +1,5 @@
 var configure = function () {
-    this.setDefaultTimeout(60 * 1000);
+    this.setDefaultTimeout(30 * 1000);
 };
 
 
