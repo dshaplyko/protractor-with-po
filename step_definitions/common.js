@@ -19,8 +19,20 @@ var CommonSteps = function () {
         return page.header.clickLogin();
     });
 
+    this.When(/^Profile menu should be displayed$/, function () {
+        return page.header.profileMenuShouldBeDisplayed();
+    });
+
+    this.When(/^Profile menu should not be displayed$/, function () {
+        return page.header.profileMenuShouldNotBeDisplayed();
+    });
+
     this.When(/^I am using step for all pages$/, function () {
         return page.methodCommonForAllPages();
+    });
+
+    this.When(/^I logout/, function () {
+        return page.header.performLogout();
     });
 
 };

@@ -20,13 +20,6 @@ var HomeSteps = function () {
         return homePage.clickOnBook();
     });
 
-    this.When(/^I logout/, function () {
-        return homePage.performLogout();
-    });
-
-
-
-
 };
 
 module.exports = HomeSteps;

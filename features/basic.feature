@@ -1,9 +1,9 @@
-Feature: Basic test
+Feature: La Mia Biblioteca Test Suite
 
   Scenario: Logging in to the application
     Given I am on "login" page
     When I enter credentials
-    Then Home page should be displayed
+    Then Profile menu should be displayed
 
   Scenario: Opening a book
     Given I am on "home" page
@@ -15,14 +15,12 @@ Feature: Basic test
     When I perform a search of "cerca"
     Then I should see a collection of results
 
-Scenario: Logging out from the application
+  Scenario: Logging out from the application
     Given I am on "login" page
     When I enter credentials
-    Then Home page should be displayed
+    Then Profile menu should be displayed
     When I logout
-    Then Home page should be displayed
-
-  
+    Then Profile menu should not be displayed
 
     # Scenario: Basic test 2
     # Given I am on "home" page
