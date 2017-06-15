@@ -7,6 +7,7 @@ var Header = function () {
     this.header = element(by.css('.wk-header'));
     this.loginButton = element(by.css(".login-button"));
     this.profile = element(by.css('.profile'));
+    this.myLibrary = element(by.css('.user-books'));
     this.logoutButton = element(by.css('.logout'));
 
     this.clickLogin = function () {
@@ -40,6 +41,14 @@ var Header = function () {
                 return self.logoutButton.click()
             })
     };
+
+    this.openMyLibrary = function () {
+        var self = this;
+        return self.myLibrary.click()
+        .then(function () {
+                return require('../page/resultsPage');
+            })
+    }
 
 };
 

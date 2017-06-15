@@ -11,10 +11,6 @@ var CommonSteps = function () {
         return page.searchBox.performSearch(searchTerm);
     });
 
-    // this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
-    //     return page.searchBox.performSearchWithFilter(searchTerm, filterName);
-    // });
-
     this.When(/^I open login page$/, function () {
         return page.header.clickLogin();
     });
@@ -27,6 +23,10 @@ var CommonSteps = function () {
         return page.header.profileMenuShouldNotBeDisplayed();
     });
 
+    this.When(/^I click My Library link$/, function () {
+        return page.header.openMyLibrary();
+    });
+
     this.When(/^I am using step for all pages$/, function () {
         return page.methodCommonForAllPages();
     });
@@ -34,6 +34,10 @@ var CommonSteps = function () {
     this.When(/^I logout/, function () {
         return page.header.performLogout();
     });
+
+    // this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
+    //     return page.searchBox.performSearchWithFilter(searchTerm, filterName);
+    // });
 
 };
 
