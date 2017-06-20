@@ -5,6 +5,11 @@ exports.config = {
     globalTimeout: 300000,
     pageTimeout: 300000,
     allScriptsTimeout: 300000,
+    multiCapabilities: [{
+    'browserName': 'firefox'
+    }, {
+    'browserName': 'chrome'
+    }],
     specs: [
         'features/*.feature'
     ],
