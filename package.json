@@ -12,7 +12,10 @@
   "scripts": {
     "prestart-webdriver": "webdriver-manager update",
     "start-webdriver": "webdriver-manager start",
-    "protractor": "protractor protractor.conf.js"
+    "protractor": "protractor protractor.conf.js",
+    "selenium-grid": "java -jar selenium-server-standalone-3.4.0.jar -role hub",
+    "chromedriver": "java -Dwebdriver.chrome.driver=./drivers/chromedriver -jar selenium-server-standalone-3.4.0.jar -role node -hub http://localhost:4444/grid/register -browser 'browserName=chrome,version=59,maxinstance=5,platform=MAC' -port 5557",
+    "geckodriver": "java -jar -Dwebdriver.gecko.driver=./drivers/geckodriver selenium-server-standalone-3.4.0.jar -role node -hub http://localhost:4444/grid/register -browser browserName=firefox,platform=MAC -port 5558"
   },
   "author": "SM",
   "license": "ISC"
