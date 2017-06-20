@@ -7,6 +7,7 @@ function DocumentPage() {
 
     this.url = 'https://new.lamiabiblioteca.com/read/';
     this.bookHeader = element(by.css('.lmb-book-header'));
+    this.title = element(by.css('.part-title .title'));
     
 
     this.documentPageShouldBeFullyDisplayed = function () {
@@ -17,6 +18,15 @@ function DocumentPage() {
         })
     };
 
+    this.doubleClickOnDocument = function () {
+        var self = this;
+        return browser.actions().doubleClick(self.title).perform();
+    }
+
+    this.highlightElement = function () {
+        var self = this;
+        return browser.executeScript("arguments[0].style.color = '" + "red" + "'", self.title)
+    }
 }
 
 DocumentPage.prototype = BasePage;

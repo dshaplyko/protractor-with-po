@@ -8,10 +8,6 @@ var HomeSteps = function () {
         return homePage.homePageShouldBeFullyDisplayed();
     });
 
-    this.Then(/^Document page should be displayed/, function () {
-        return documentPage.documentPageShouldBeFullyDisplayed();
-    });
-
     this.Then(/^I am using step only for home page/, function () {
         return homePage.methodOnlyForHomePage();
     });

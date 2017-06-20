@@ -23,7 +23,17 @@ var BasePage = function () {
         return browser.actions().sendKeys(protractor.Key.ENTER).perform();
     };
 
+    this.scrollToTheBottom = function () {
+         return browser.executeScript('window.scrollTo(0, document.body.scrollHeight)');
+    }
 
+    this.scrollToTheTop = function () {
+         return browser.executeScript('window.scrollTo(0, 0)');
+    }
+
+    this.wait = function () {
+        return browser.sleep(5000);
+    }
 };
 
 module.exports = new BasePage();

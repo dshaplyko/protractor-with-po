@@ -35,6 +35,19 @@ var CommonSteps = function () {
         return page.header.performLogout();
     });
 
+    this.When(/^I scroll to the bottom/, function () {
+        return page.scrollToTheBottom();
+    });
+
+    this.When(/^I scroll to the top/, function () {
+        return page.scrollToTheTop();
+    });
+
+    this.When(/^I wait for 5 seconds/, function () {
+        return page.wait();
+    });
+
+
     // this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
     //     return page.searchBox.performSearchWithFilter(searchTerm, filterName);
     // });
