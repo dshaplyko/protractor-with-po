@@ -48,11 +48,10 @@ var CommonSteps = function () {
     });
 
 
-    // this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
-    //     return page.searchBox.performSearchWithFilter(searchTerm, filterName);
-    // });
+    this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
+        return page.searchBox.performSearchWithFilter(searchTerm, filterName);
+    });
 
 };
 
 module.exports = CommonSteps;
-
