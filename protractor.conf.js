@@ -11,7 +11,7 @@ exports.config = {
     'browserName': 'chrome'
     }],
     specs: [
-        './test/e2e/features/*.feature'
+        './test/e2e/features/*/*.feature'
     ],
     cucumberOpts: {
         require: [
