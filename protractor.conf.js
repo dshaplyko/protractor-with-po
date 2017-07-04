@@ -4,6 +4,7 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     globalTimeout: 300000,
     pageTimeout: 300000,
+    baseUrl: 'https://new.lamiabiblioteca.com/',
     allScriptsTimeout: 300000,
     multiCapabilities: [{
     // 'browserName': 'firefox'

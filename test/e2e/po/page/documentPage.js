@@ -5,10 +5,10 @@ var BasePage = require('./basePage');
 
 function DocumentPage() {
 
-    this.url = 'https://new.lamiabiblioteca.com/read/';
+    this.url = '/read';
     this.bookHeader = element(by.css('.lmb-book-header'));
     this.title = element(by.css('.part-title .title'));
-    
+
 
     this.documentPageShouldBeFullyDisplayed = function () {
         var self = this;

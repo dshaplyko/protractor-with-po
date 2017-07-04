@@ -20,7 +20,6 @@ var SearchBox = function () {
             });
     };
 
-
     this.setFilterFromDropdown = function (value) {
         var self = this;
         return self.searchFilterDropdown.click()

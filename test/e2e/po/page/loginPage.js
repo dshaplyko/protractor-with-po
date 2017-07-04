@@ -4,7 +4,7 @@ var expect = chai.expect;
 
 function LoginPage() {
 
-    this.url = 'https://new.lamiabiblioteca.com/login';
+    this.url = '/login';
 
     this.userName = element(by.css("input[name='userName']"));
     this.password = element(by.css("input[name='password']"));

@@ -5,7 +5,7 @@ var BasePage = require('./basePage');
 
 function HomePage() {
 
-    this.url = 'https://new.lamiabiblioteca.com/home';
+    this.url = '/home';
     this.publications = element(by.css('.lmb-page-content'));
     this.books = element.all(by.css('.lmb-book-info-panel > a'));
 
