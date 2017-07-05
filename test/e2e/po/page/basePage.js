@@ -8,7 +8,6 @@ var BasePage = function () {
     this.header = Header;
     this.footer = Footer;
 
-
     this.visit = function () {
         return browser.get(this.url);
     };

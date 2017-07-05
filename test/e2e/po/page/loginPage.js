@@ -1,5 +1,6 @@
 var BasePage = require('./basePage');
 var chai = require('chai');
+var consts = require('../../const/const');
 var expect = chai.expect;
 
 function LoginPage() {
@@ -12,9 +13,9 @@ function LoginPage() {
 
     this.submitForm = function () {
         var self = this;
-        return self.userName.sendKeys("testbiblio")
+        return self.userName.sendKeys(consts.username)
             .then(function () {
-                return self.password.sendKeys("testbiblio")
+                return self.password.sendKeys(consts.password);
             })
             .then(function () {
                 return self.loginButton.click();

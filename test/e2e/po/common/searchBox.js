@@ -8,6 +8,7 @@ var SearchBox = function () {
     this.searchButton = element(by.css('.wk-search-bar .wk-search-submit'));
     this.searchFilterDropdown = element(by.css('.wk-select-field'));
     this.searchFilterDropdownOverlay = element(by.css('.wk-select-field select'));
+    this.ECTimeout = 12 * 1000;
     // this.searchByImage = element.all(by.css('.search-camera-icon'));
 
     this.performSearch = function (searchTerm) {
@@ -24,7 +25,7 @@ var SearchBox = function () {
         var self = this;
         return self.searchFilterDropdown.click()
             .then(function () {
-                return browser.wait(EC.visibilityOf(self.searchFilterDropdownOverlay), 5000);
+                return browser.wait(EC.visibilityOf(self.searchFilterDropdownOverlay), self.ECTimeout);
             })
             .then(function () {
                 return helper.setValueInDropdown(value);
