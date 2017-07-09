@@ -30,4 +30,4 @@ function DocumentPage() {
 }
 
 DocumentPage.prototype = BasePage;
-module.exports = new DocumentPage();
+module.exports = DocumentPage;

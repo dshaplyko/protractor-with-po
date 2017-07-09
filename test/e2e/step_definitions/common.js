@@ -1,10 +1,11 @@
 var page = require('../po/page/basePage');
-var provider = require('../po/page/pageObjectProvider');
+
+var pageFactory = require('../support/pageFactory');
 
 var CommonSteps = function () {
 
     this.Given(/^I am on "([^"]*)" page$/, function (pageName) {
-        return provider.getPageObjects(pageName).visit();
+        return pageFactory(pageName).visit();
     });
 
     this.When(/^I perform a search of "([^"]*)"$/, function (searchTerm) {
@@ -46,7 +47,6 @@ var CommonSteps = function () {
     this.When(/^I wait for 5 seconds/, function () {
         return page.wait();
     });
-
 
     this.When(/^I perform a search of "([^"]*)" with "([^"]*)" filter$/, function (searchTerm, filterName) {
         return page.searchBox.performSearchWithFilter(searchTerm, filterName);

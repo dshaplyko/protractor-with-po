@@ -36,4 +36,4 @@ function HomePage() {
 }
 
 HomePage.prototype = BasePage;
-module.exports = new HomePage();
+module.exports = HomePage;

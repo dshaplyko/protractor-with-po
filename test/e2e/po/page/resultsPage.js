@@ -40,7 +40,7 @@ function ResultsPage() {
 }
 
 ResultsPage.prototype = BasePage;
-module.exports = new ResultsPage();
+module.exports = ResultsPage;
 
 
 

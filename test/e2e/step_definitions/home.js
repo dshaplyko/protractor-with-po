@@ -1,5 +1,4 @@
-var homePage = require('../po/page/homePage');
-var documentPage = require('../po/page/documentPage');
+var homePage = require('../support/pageFactory')('home');
 
 var HomeSteps = function () {
 

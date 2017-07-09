@@ -1,4 +1,4 @@
-var documentPage = require('../po/page/documentPage');
+var documentPage = require('../support/pageFactory')('document');
 
 var DocumentSteps = function () {
 

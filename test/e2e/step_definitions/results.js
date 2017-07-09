@@ -1,5 +1,4 @@
-var resultsPage = require('../po/page/resultsPage');
-var provider = require('../po/page/pageObjectProvider');
+var resultsPage = require('../support/pageFactory')('results');
 
 var ResultsSteps = function () {
 

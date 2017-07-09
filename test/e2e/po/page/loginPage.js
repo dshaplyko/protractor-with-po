@@ -10,6 +10,7 @@ function LoginPage() {
     this.userName = element(by.css("input[name='userName']"));
     this.password = element(by.css("input[name='password']"));
     this.loginButton = element(by.css('.wk-button-primary'));
+    this.loginForm = element(by.css('.wk-login-form-container'));
 
     this.submitForm = function () {
         var self = this;
@@ -27,7 +28,7 @@ function LoginPage() {
 
     this.loginPageShouldBeFullyDisplayed = function () {
         var self = this;
-        return self.userName.isDisplayed().then(function (isDisplayed) {
+        return self.loginForm.isDisplayed().then(function (isDisplayed) {
             return expect(isDisplayed).to.be.true;
         })
     };
@@ -35,4 +36,4 @@ function LoginPage() {
 }
 
 LoginPage.prototype = BasePage;
-module.exports = new LoginPage();
+module.exports = LoginPage;

@@ -1,4 +1,4 @@
-var loginPage = require('../po/page/loginPage');
+var loginPage = require('../support/pageFactory')('login');
 
 var LoginSteps = function () {
 
