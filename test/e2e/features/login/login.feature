@@ -4,10 +4,6 @@ Feature: Login Feature
     Given I am on "login" page
     When I enter credentials
     Then Profile menu should be displayed
-    When I scroll to the bottom
-      And I wait for 5 seconds
-      And I scroll to the top
-      And I wait for 5 seconds
 
   Scenario: Logging out from the application
     Given I am on "login" page
