@@ -1,6 +1,3 @@
-var chai = require('chai');
-var expect = chai.expect;
-
 var BasePage = require('./basePage');
 
 function DocumentPage() {
@@ -12,10 +9,7 @@ function DocumentPage() {
 
     this.documentPageShouldBeFullyDisplayed = function () {
         var self = this;
-        return self.bookHeader.isDisplayed().then(function (isDisplayed) {
-            return expect(isDisplayed).to.be.true;
-
-        })
+        return self.bookHeader.isDisplayed()
     };
 
     this.doubleClickOnDocument = function () {

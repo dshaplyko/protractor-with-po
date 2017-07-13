@@ -1,5 +1,9 @@
 Feature: Login Feature
 
+Scenario: Checking elements on login page
+  Given I am on "login" page
+  Then Login dialog should be displayed 
+
   Scenario: Logging in to the application
     Given I am on "login" page
     When I enter credentials

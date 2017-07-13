@@ -1,6 +1,3 @@
-var chai = require('chai');
-var expect = chai.expect;
-
 var BasePage = require('./basePage');
 
 function HomePage() {
@@ -11,9 +8,7 @@ function HomePage() {
 
     this.homePageShouldBeFullyDisplayed = function () {
         var self = this;
-        return self.publications.isDisplayed().then(function (isDisplayed) {
-            return expect(isDisplayed).to.be.true;
-        })
+        return self.publications.isDisplayed()
     };
 
     this.findBook = function () {

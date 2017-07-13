@@ -1,5 +1,4 @@
-var chai = require('chai');
-var expect = chai.expect;
+var EC = protractor.ExpectedConditions;
 
 var Header = function () {
 
@@ -9,6 +8,7 @@ var Header = function () {
     this.profile = element(by.css('.profile'));
     this.myLibrary = element(by.css('.user-books'));
     this.logoutButton = element(by.css('.logout'));
+    this.ECTimeout = 12 * 1000;
 
     this.clickLogin = function () {
         var self = this;
@@ -18,20 +18,17 @@ var Header = function () {
             })
     }
 
-    this.profileMenuShouldBeDisplayed = function () {
+    this.profileMenuShouldBeDisplayed = function (value) {
         var self = this;
-        return self.profile.isDisplayed().then(function (isDisplayed) {
-            return expect(isDisplayed).to.be.true;
-
-        })
+        return browser.wait(EC.visibilityOf(self.profile), self.ECTimeout)
+            .then(function () {
+                return self.profile.isDisplayed()
+            });
     };
 
-    this.profileMenuShouldNotBeDisplayed = function () {
+    this.loginButtonShouldBeDisplayed = function () {
         var self = this;
-        return self.loginButton.isDisplayed().then(function (isDisplayed) {
-            return expect(isDisplayed).to.be.true;
-
-        })
+        return self.loginButton.isDisplayed();
     };
 
     this.performLogout = function () {

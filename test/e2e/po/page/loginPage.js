@@ -1,7 +1,5 @@
 var BasePage = require('./basePage');
-var chai = require('chai');
 var consts = require('../../const/const');
-var expect = chai.expect;
 
 function LoginPage() {
 
@@ -27,9 +25,7 @@ function LoginPage() {
 
     this.loginPageShouldBeFullyDisplayed = function () {
         var self = this;
-        return self.userName.isDisplayed().then(function (isDisplayed) {
-            return expect(isDisplayed).to.be.true;
-        })
+        return self.userName.isDisplayed()
     };
 
 }

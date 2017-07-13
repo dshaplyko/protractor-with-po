@@ -1,11 +1,14 @@
+var chai = require('chai');
+var expect = chai.expect;
 var homePage = require('../po/page/homePage');
-var documentPage = require('../po/page/documentPage');
 
 var HomeSteps = function () {
 
 
     this.Then(/^Home page should be displayed/, function () {
-        return homePage.homePageShouldBeFullyDisplayed();
+        return homePage.homePageShouldBeFullyDisplayed().then(function (isDisplayed) {
+            return expect(isDisplayed).to.be.true;
+        });
     });
 
     this.Then(/^I am using step only for home page/, function () {

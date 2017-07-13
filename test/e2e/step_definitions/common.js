@@ -1,5 +1,7 @@
 var page = require('../po/page/basePage');
 var provider = require('../po/page/pageObjectProvider');
+var chai = require('chai');
+var expect = chai.expect;
 
 var CommonSteps = function () {
 
@@ -16,11 +18,15 @@ var CommonSteps = function () {
     });
 
     this.When(/^Profile menu should be displayed$/, function () {
-        return page.header.profileMenuShouldBeDisplayed();
+        return page.header.profileMenuShouldBeDisplayed().then(function (isDisplayed) {
+            return expect(isDisplayed).to.be.true;
+        });
     });
 
     this.When(/^Profile menu should not be displayed$/, function () {
-        return page.header.profileMenuShouldNotBeDisplayed();
+        return page.header.loginButtonShouldBeDisplayed().then(function (isDisplayed) {
+            return expect(isDisplayed).to.be.true;
+        });
     });
 
     this.When(/^I click My Library link$/, function () {

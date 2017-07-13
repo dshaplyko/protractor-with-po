@@ -11,11 +11,11 @@ Feature: Home Feature
     When I open a book
     Then Document page should be displayed
 
-  Scenario: Invoking a highlighting popup
-    Given I am on "login" page
-    When I enter credentials
-    Then Profile menu should be displayed
-    When I open a book
-      And I double click on title
-      And I highlight title
-      And I wait for 5 seconds
+  # Scenario: Invoking a highlighting popup
+  #   Given I am on "login" page
+  #   When I enter credentials
+  #   Then Profile menu should be displayed
+  #   When I open a book
+  #     And I double click on title
+  #     And I highlight title
+  #     And I wait for 5 seconds
