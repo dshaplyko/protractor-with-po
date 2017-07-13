@@ -1,6 +1,5 @@
 var chai = require('chai');
 var expect = chai.expect;
-
 var documentPage = require('../po/page/documentPage');
 
 var DocumentSteps = function () {

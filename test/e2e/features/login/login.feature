@@ -14,4 +14,4 @@ Scenario: Checking elements on login page
     When I enter credentials
     Then Profile menu should be displayed
     When I logout
-    Then Profile menu should not be displayed
+    Then Login button should be displayed

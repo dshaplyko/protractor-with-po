@@ -9,15 +9,6 @@ var ResultsSteps = function () {
             expect(number).to.be.above(0)
         });
     });
-
-    // this.When(/^I open Signature gallery tab/, function () {
-    //     return resultsPage.openGalleryTabByName();
-    // });
-
-    // this.Then(/^I should see a collection of images/, function () {
-    //     return resultsPage.checkImagesResults();
-    // });
-
 };
 
 module.exports = ResultsSteps;

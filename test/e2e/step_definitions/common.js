@@ -23,7 +23,7 @@ var CommonSteps = function () {
         });
     });
 
-    this.When(/^Profile menu should not be displayed$/, function () {
+    this.When(/^Login button should be displayed$/, function () {
         return page.header.loginButtonShouldBeDisplayed().then(function (isDisplayed) {
             return expect(isDisplayed).to.be.true;
         });
