@@ -6,11 +6,9 @@ exports.config = {
     pageTimeout: 300000,
     baseUrl: 'https://new.lamiabiblioteca.com/',
     allScriptsTimeout: 300000,
-    multiCapabilities: [{
-    // 'browserName': 'firefox'
-    // }, {
-    'browserName': 'chrome'
-    }],
+    capabilities: {
+        'browserName': 'chrome'
+    },
     specs: [
         './test/e2e/features/*/*.feature'
     ],
