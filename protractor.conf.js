@@ -25,5 +25,4 @@ exports.config = {
         browser.manage().window().setSize(1200, 900);
         console.log('e2e started');
     }
-
 };
