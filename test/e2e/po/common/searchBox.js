@@ -1,5 +1,5 @@
 var helper = require('../../support/helper');
-var consts = require('../../const/const')
+var consts = require('../../support/const')
 
 var EC = protractor.ExpectedConditions;
 

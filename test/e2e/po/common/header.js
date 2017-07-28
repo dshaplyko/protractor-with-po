@@ -1,5 +1,5 @@
 var EC = protractor.ExpectedConditions;
-var consts = require('../../const/const')
+var consts = require('../../support/const')
 
 var Header = function () {
 

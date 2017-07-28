@@ -1,5 +1,5 @@
 var BasePage = require('./basePage');
-var consts = require('../../const/const');
+var consts = require('../../support/const');
 
 function LoginPage() {
 

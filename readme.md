@@ -1,7 +1,7 @@
 E2e testing
 ---------------
-Testing is organized using Protractor with Cucumber JS
-To install the project:
+<p>Testing is organized using Protractor with Cucumber JS</p>
+<p>To install the project:</p>
 
 1. npm i
 
