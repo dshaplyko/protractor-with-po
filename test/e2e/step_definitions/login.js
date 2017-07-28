@@ -16,4 +16,3 @@ var LoginSteps = function () {
 };
 
 module.exports = LoginSteps;
-

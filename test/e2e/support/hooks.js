@@ -4,7 +4,6 @@ var provider = require('../po/page/pageObjectProvider');
 var consts = require('../const/const')
 var EC = protractor.ExpectedConditions;
 
-
 module.exports = function () {
 
     this.Before({tags: ['@role(logged)']}, function() {

@@ -12,4 +12,3 @@ var ResultsSteps = function () {
 };
 
 module.exports = ResultsSteps;
-
