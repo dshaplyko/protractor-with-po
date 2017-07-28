@@ -14,8 +14,8 @@ gulp.task('protractor', function(cb) {
 	}).pop();
 	var configPath = 'protractor.conf.js';
 	switch (config) {
-		case 'common': configPath = 'protractor.conf.js'; break;
-		case 'mobile': configPath = 'protractorMM.conf.js'; break;
+		case 'common': configPath = 'e2e-common.js'; break;
+		case 'mobile': configPath = 'e2e-mobile.js'; break;
 	}
 	
 	child_process.spawn('protractor', [configPath].concat(argv), {

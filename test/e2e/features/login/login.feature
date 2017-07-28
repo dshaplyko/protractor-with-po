@@ -1,3 +1,4 @@
+@mobile
 Feature: Login Feature
 
 Scenario: Checking elements on login page

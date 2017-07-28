@@ -16,7 +16,7 @@ exports.config = {
         require: [
             './test/e2e/step_definitions/*.js',
             './env.js',
-            './hooks.js'
+            './test/e2e/support/hooks.js'
         ],
         format: 'pretty'
     },

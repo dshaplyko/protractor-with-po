@@ -16,7 +16,7 @@
   "scripts": {
     "prestart-webdriver": "webdriver-manager update",
     "start-webdriver": "webdriver-manager start",
-    "protractor": "protractor protractor.conf.js"
+    "e2e": "protractor e2e-common.js"
   },
   "author": "SM",
   "license": "ISC",

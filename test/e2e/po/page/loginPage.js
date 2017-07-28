@@ -27,7 +27,6 @@ function LoginPage() {
         var self = this;
         return self.userName.isDisplayed()
     };
-
 }
 
 LoginPage.prototype = BasePage;

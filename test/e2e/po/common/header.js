@@ -1,4 +1,5 @@
 var EC = protractor.ExpectedConditions;
+var consts = require('../../const/const')
 
 var Header = function () {
 
@@ -8,7 +9,6 @@ var Header = function () {
     this.profile = element(by.css('.profile'));
     this.myLibrary = element(by.css('.user-books'));
     this.logoutButton = element(by.css('.logout'));
-    this.ECTimeout = 12 * 1000;
 
     this.clickLogin = function () {
         var self = this;
@@ -20,7 +20,7 @@ var Header = function () {
 
     this.profileMenuShouldBeDisplayed = function (value) {
         var self = this;
-        return browser.wait(EC.visibilityOf(self.profile), self.ECTimeout)
+        return browser.wait(EC.visibilityOf(self.profile), consts.ECTimeout)
             .then(function () {
                 return self.profile.isDisplayed()
             });
