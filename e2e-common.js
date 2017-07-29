@@ -15,7 +15,7 @@ exports.config = {
     cucumberOpts: {
         require: [
             './test/e2e/step_definitions/*.js',
-            './env.js',
+            './test/e2e/support/env',
             './test/e2e/support/hooks.js'
         ],
         format: 'pretty'

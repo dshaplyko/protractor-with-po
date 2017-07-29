@@ -18,7 +18,7 @@ var Header = function () {
             })
     }
 
-    this.profileMenuShouldBeDisplayed = function (value) {
+    this.profileMenuShouldBeDisplayed = function () {
         var self = this;
         return browser.wait(EC.visibilityOf(self.profile), consts.ECTimeout)
             .then(function () {
